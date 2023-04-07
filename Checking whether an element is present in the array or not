@@ -1,0 +1,21 @@
+#include <iostream>
+#include <algorithm>
+ 
+int main()
+{
+    int arr[] = {5, 3, 7, 6, 8, 2};
+    int target;
+    cout<<"enter the value of target"<<endl;
+    cin>>target;
+ 
+    int n = sizeof(arr) / sizeof(*arr);
+ 
+    bool exists = find(arr, arr + n, target) != arr + n;
+    if (exists) {
+        cout << "Element found";
+    } else {
+        cout << "Element not found";
+    }
+ 
+    return 0;
+}
